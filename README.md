@@ -1,1 +1,1 @@
-# .net-build-scripts
+# dot-net-continues-integration-with-jenkins
