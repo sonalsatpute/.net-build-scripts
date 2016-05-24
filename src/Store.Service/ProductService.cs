@@ -15,5 +15,15 @@ namespace Store.Service
     {
       return _repository.GetAll();
     }
+
+    public Product Get(int productId)
+    {
+      return _repository.Get(productId);
+    }
+
+    public Product Add(Product product)
+    {
+      return _repository.Add(product);
+    }
   }
 }
