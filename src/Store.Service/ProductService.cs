@@ -25,5 +25,10 @@ namespace Store.Service
     {
       return _repository.Add(product);
     }
+
+    public Product Update(Product product)
+    {
+      return _repository.Update(product);
+    }
   }
 }
