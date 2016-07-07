@@ -6,7 +6,7 @@ using NSubstitute;
 namespace StoreService.Specs
 {
   [Subject(typeof(ProductService))]
-  public class Db_ProductServiceBaseGet : ProductServiceBaseSpecs
+  public class ProductServiceGet : ProductServiceBaseSpecs
   {
     class when_store_has_no_produts
     {

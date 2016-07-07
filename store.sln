@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService", "src\Store.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Specs", "src\Store.Service.Specs\StoreService.Specs.csproj", "{69C98ECF-EADA-4DD0-A723-47B03C241249}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.WebApi", "src\StoreService.WebApi\StoreService.WebApi.csproj", "{B7E1A0AB-F0B2-455F-A187-A029B824DF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.WebApi.Specs", "src\StoreService.WebApi.Specs\StoreService.WebApi.Specs.csproj", "{74C1E9C3-9483-4FAF-8F52-9648203D69E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{69C98ECF-EADA-4DD0-A723-47B03C241249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69C98ECF-EADA-4DD0-A723-47B03C241249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C98ECF-EADA-4DD0-A723-47B03C241249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E1A0AB-F0B2-455F-A187-A029B824DF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E1A0AB-F0B2-455F-A187-A029B824DF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E1A0AB-F0B2-455F-A187-A029B824DF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E1A0AB-F0B2-455F-A187-A029B824DF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C1E9C3-9483-4FAF-8F52-9648203D69E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C1E9C3-9483-4FAF-8F52-9648203D69E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C1E9C3-9483-4FAF-8F52-9648203D69E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C1E9C3-9483-4FAF-8F52-9648203D69E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +51,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{89D62877-F0A2-488E-8212-BB830A97BDD0} = {B4E0F503-AFF8-435F-90D1-A21BE14E79E2}
 		{69C98ECF-EADA-4DD0-A723-47B03C241249} = {FE64ED4E-B7E2-4FAB-9826-5D7C32BCDBB6}
+		{B7E1A0AB-F0B2-455F-A187-A029B824DF91} = {B4E0F503-AFF8-435F-90D1-A21BE14E79E2}
+		{74C1E9C3-9483-4FAF-8F52-9648203D69E1} = {FE64ED4E-B7E2-4FAB-9826-5D7C32BCDBB6}
 	EndGlobalSection
 EndGlobal
