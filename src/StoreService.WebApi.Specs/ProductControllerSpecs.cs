@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Results;
 using Machine.Specifications;
@@ -32,17 +33,24 @@ namespace StoreService.WebApi.Specs
     {
       Establish context = () =>
       {
-        _repository = Substitute.For<IProductRepository>();
+        IProductRepository _repository = Substitute.For<IProductRepository>();
         _repository.GetAll().Returns(GetDummyProducts());
         _productController = new ProductController(new ProductService(_repository));
       };
 
-      Because of = () => _actionResult = _productController.Get();
+      Because of = () =>
+      {
+        _actionResult = _productController.Get();
+        var contentResult = _actionResult as OkNegotiatedContentResult<IEnumerable<Product>>;
+        _products = contentResult.Content;
+      };
 
       It should_return_ok = () => _actionResult.ShouldBeOfExactType<OkNegotiatedContentResult<IEnumerable<Product>>>();
-      static IProductRepository _repository;
+      It should_have_ten_products = () => _products.Count().ShouldEqual(10);
+
       static ProductController _productController;
       static IHttpActionResult _actionResult;
+      static IEnumerable<Product> _products;
     }
   }
 }
