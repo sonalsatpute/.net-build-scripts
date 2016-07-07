@@ -18,7 +18,7 @@ namespace StoreService.WebApi.Controllers
       return Ok(products);
     }
 
-    public IHttpActionResult Add(Product newProduct)
+    public IHttpActionResult Add([FromBody]Product newProduct)
     {
       Product product = _service.Add(newProduct);
       return Ok(product);
