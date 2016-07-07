@@ -14,9 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D7E949
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Service", "src\Store.Service\Store.Service.csproj", "{89D62877-F0A2-488E-8212-BB830A97BDD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService", "src\Store.Service\StoreService.csproj", "{89D62877-F0A2-488E-8212-BB830A97BDD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Service.Specs", "src\Store.Service.Specs\Store.Service.Specs.csproj", "{69C98ECF-EADA-4DD0-A723-47B03C241249}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Specs", "src\Store.Service.Specs\StoreService.Specs.csproj", "{69C98ECF-EADA-4DD0-A723-47B03C241249}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

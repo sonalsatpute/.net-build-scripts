@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Store.Service
+namespace StoreService
 {
   public class InvalidProductException : Exception
   {

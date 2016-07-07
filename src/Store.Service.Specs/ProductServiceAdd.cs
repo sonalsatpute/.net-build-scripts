@@ -1,7 +1,7 @@
 ﻿using Machine.Specifications;
 using NSubstitute;
 
-namespace Store.Service.Specs
+namespace StoreService.Specs
 {
   [Subject(typeof(ProductService))]
   public class ProductServiceAdd  : ProductServiceBaseSpecs

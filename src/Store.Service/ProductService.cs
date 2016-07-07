@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Store.Service
+namespace StoreService
 {
   public class ProductService
   {
