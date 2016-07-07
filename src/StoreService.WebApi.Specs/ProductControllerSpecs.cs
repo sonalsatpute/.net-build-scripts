@@ -73,7 +73,7 @@ namespace StoreService.WebApi.Specs
       It should_return_new_product = () =>
       {
         var contentResult = _actionResult as OkNegotiatedContentResult<Product>;
-        contentResult.Content.ShouldBeNull();
+        contentResult.Content.ShouldNotBeNull();
         contentResult.Content.Id.ShouldEqual(1);
       };
 
