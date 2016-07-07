@@ -4,7 +4,7 @@ namespace Store.Service
 {
   public class ProductService
   {
-    private readonly IProductRepository _repository;
+    readonly IProductRepository _repository;
 
     public ProductService(IProductRepository repository)
     {
