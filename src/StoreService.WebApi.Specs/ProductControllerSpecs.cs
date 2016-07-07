@@ -11,6 +11,10 @@ namespace StoreService.WebApi.Specs
   [Subject(typeof(ProductController))]
   public class ProductControllerSpecs
   {
+     static ProductController _productController;
+     static IHttpActionResult _actionResult;
+
+
     static IEnumerable<Product> GetDummyProducts()
     {
       return new List<Product>()
@@ -28,7 +32,7 @@ namespace StoreService.WebApi.Specs
         };
     }
 
-
+    
     class given_store_has_ten_products_when_requesting_all_products
     {
       Establish context = () =>
@@ -47,9 +51,33 @@ namespace StoreService.WebApi.Specs
         contentResult.Content.Count().ShouldEqual(10);
       };
 
-      static ProductController _productController;
-      static IHttpActionResult _actionResult;
+     
       
+    }
+
+    class give_store_has_no_products_when_adding_new_product
+    {
+      Establish context = () =>
+      {
+        IProductRepository _repository = Substitute.For<IProductRepository>();
+        _repository.Add(Arg.Any<Product>())
+          .Returns(new Product { Id = 1, Name = "Product Name", Price = 1M });
+        _productController = new ProductController(new ProductService(_repository));
+        _product = new Product() { Name = "Product Name", Price = 10.0M };
+      };
+
+      Because of = () => _actionResult = _productController.Add(_product);
+
+      It should_return_ok = () => _actionResult.ShouldBeOfExactType<OkNegotiatedContentResult<Product>>();
+
+      It should_return_new_product = () =>
+      {
+        var contentResult = _actionResult as OkNegotiatedContentResult<Product>;
+        contentResult.Content.ShouldBeNull();
+        contentResult.Content.Id.ShouldEqual(1);
+      };
+
+      static Product _product;
     }
   }
 }
