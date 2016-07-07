@@ -29,7 +29,7 @@ namespace StoreService.WebApi.Specs
     }
 
 
-    class given_store_has_ten_products_when_requisting_all_products
+    class given_store_has_ten_products_when_requesting_all_products
     {
       Establish context = () =>
       {
