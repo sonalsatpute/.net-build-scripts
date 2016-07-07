@@ -38,19 +38,18 @@ namespace StoreService.WebApi.Specs
         _productController = new ProductController(new ProductService(_repository));
       };
 
-      Because of = () =>
-      {
-        _actionResult = _productController.Get();
-        var contentResult = _actionResult as OkNegotiatedContentResult<IEnumerable<Product>>;
-        _products = contentResult.Content;
-      };
+      Because of = () => _actionResult = _productController.Get();
 
       It should_return_ok = () => _actionResult.ShouldBeOfExactType<OkNegotiatedContentResult<IEnumerable<Product>>>();
-      It should_have_ten_products = () => _products.Count().ShouldEqual(10);
+      It should_have_ten_products = () =>
+      {
+        var contentResult = _actionResult as OkNegotiatedContentResult<IEnumerable<Product>>;
+        contentResult.Content.Count().ShouldEqual(10);
+      };
 
       static ProductController _productController;
       static IHttpActionResult _actionResult;
-      static IEnumerable<Product> _products;
+      
     }
   }
 }
